@@ -2,9 +2,9 @@
 import React, { useState } from 'react'
 import Index from './Index'
 const FormControl=()=>{
-    const [name, setName]=useState("rakesh")
-    const [deptt,setDeptt]=useState("ee")
-    const [salary,setSalary]=useState("2000")
+    const [name, setName]=useState("rakesh kumar")
+    const [deptt,setDeptt]=useState("electrical")
+    const [salary,setSalary]=useState("200000")
     // const [display, setDisplay]=useState("")
     const [newentry, setNewentry] = useState([])
     const[show, setShow]=useState(true)

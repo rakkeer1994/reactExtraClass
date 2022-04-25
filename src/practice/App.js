@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import Index from './index'
 const MakeDiv=()=>{
     return(
         <>
@@ -21,6 +21,7 @@ const App=()=>{
     return(
         <>
         <button onClick={()=>{setChanges(!changes)}}>Click me</button>
+        <Index/>
          {changes ? <MakeDiv/> : <DynamicDiv/>}
         </>
     )

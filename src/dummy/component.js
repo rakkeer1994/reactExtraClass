@@ -9,7 +9,9 @@ const Component = () => {
                 console.log(res)
             })
 
-            axios.post("")
+            axios.post("http://localhost:3001/addUser",{name:"kumar", age:24}).then((res)=>{
+              console.log(res)
+            })
     })
   return (
     <div>
