@@ -8,7 +8,8 @@ import ReactDOM from 'react-dom';
 // import App from './dummy/App'
 // import App from './third class/App'
 // import App from './forthClass/App'
-import App from './hooks/App'
+// import App from './hooks/App'
+import App from './hooks/context/App'
 
 ReactDOM.render(
   <React.StrictMode>
