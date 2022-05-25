@@ -1,0 +1,609 @@
+
+
+
+
+
+
+What is React?
+React is an open-source front-end JavaScript library that is used for building user interfaces, especially for single-page applications. 
+It is used for handling view layer for web and mobile apps.
+
+Why react is opted:
+React has numerous features like
+if we compare based on users like how many users using react and angular
+so react acount is very high since last 3-4 years and job is providing by react is very high
+bcz of that i opted but job is not only reason behind it the developrs should look forward too
+The biggest feature for new developrs is easy learning curve
+Another reason is that we dont take care about separate html js file bcs react is provided
+jsx means we can code html and js together
+
+
+react featurs:
+1) Single Page Application
+2) Use JSX
+3) Virtual dom
+4) One way data binding
+5) Easy learning curve
+6) GreAT Comunity supported
+7) Reusable component
+
+Single Page Application: React is based on single page application concept
+single page application means in normal web application in which we are clicking on any button
+or selecting option from navigation bar then then the web page is reloading then that means the application is
+multi page application
+But in singlepage application does not the web page reload and just updste the page 
+whatever we wanted to change the the application is known as single page application 
+When we create react application using CRA it always create the application which will be single
+page application.
+
+Virtual DOM: first of all we understand that what is dom so whenever the html css and 
+javascript file goes to browser and run first time then it will create tree like structure
+this structure is also known as document object model.
+so react is used special like dom called virtual dom instead of rreal dom, other js framwork updates real dom which makes
+the web application slow.
+whenever any react application gets loaded on screen for the first time react component
+gets mounted 
+NOW when any user makes changes on the screen like button click bcz of which the state variable will get updated so
+in this cases the change will not directly go to real DOM insteat react uses virtual dom 
+so we are having two virtual dom one virtual dom created during mounting of component so it si a copy of real dom
+and anpother virtual dom contains the new updates, states 
+Now this two virtual dom will get compared to each other and will check for the new changes this 
+complete procedure known as "diffing algorithm"
+Now the new changes will be updated in our real dom this process is known as "Reconciliation"
+So manupulating virtual dom is much faster 
+
+JSX: react use JSX(JavaScript Syntax Extension) JSX is a combination of HTML and JavaScript. 
+We can embed JavaScript objects inside the HTML elements.But JSX is not supported by the browsers,
+ as a result Babel compiler transcompile the code into JavaScript code. JSX makes codes easy and understandable. 
+ It is easy to learn if we know HTML and JavaScript.
+Basically it just provides syntactic sugar for the React.createElement() function, giving us expressiveness of JavaScript along with HTML like template syntax.
+
+One Way data binding: a special feature is One-way Data Binding:Follows Unidirectional data flow or data binding.The data in react flows only in one direction 
+i.e. the data is transferred from top to bottom i.e. from parent components to child components. The properties(props) in the child component cannot return 
+the data to its parent component but it can have communication with the parent components to modify the states according to the provided inputs.
+This is the working process of one-way data binding. This keeps everything modular and fast.
+
+Easy Learning curve: How we can say that easy learning curve it is suppose to say that when thestudent are in college then the students aware about
+html css and js bcz these are very basic technology so whenever anyone want to work with react then the guy start working with react
+bcz we dont need to learn anything extra sowe can jump directly on react
+
+
+Library v/s Framwork:
+Library vs Framework? Library: -is a collection of functions -In case of library the Execution of code will be decided by the developers Means developers are in charge of the flow of the whole application. 
+-We are choosing when and where to call the library. -in case of library its developers duty to design the structure. -library follows View model Framework: -Framework is a collection of multiple other libraries. 
+-in case of framework the execution is already defined or decided.
+the framework is in charge of the flow of the whole application. 
+-It provides some places for we have to plug in our code, but it calls the code you plugged in as needed. -Framework provides you a structure in which we just put down the code our functionality. -it follows MVC structure (model view controller)
+
+Named and Default export:
+whenever we want to multiple export inside single file then we use named export bcz default export allow only one export inside any file
+if we want named export then just put export keyword before any function/object/class component.
+while importing in case of named export we enclose inside curly braces bcs we can import multiple variable form single file
+but in case of default export we donot need to enclos inside curly brace while importing bcs it is only one export
+
+What is CRA:
+the create-react-app is a tool/boilerplate that allow us to create quickly and run our application quickly without any config
+it is a easiest way for creating react application
+while creating cra it provide a default setup which includes module bundler(webpack) and babel and other required module also
+
+React Props:
+We know that the react is all about the component and that all component are connected to each others like in parent-child / sibling relations
+but if we want to communicate/pass data with each other then how it is passed then there is props comes into picture
+so props are used to pass data from parent component to child component
+Props 
+Props are arguments passed into React components.
+Props stand for "Properties." They are read-only components. It is an object which stores the value of attributes of a tag 
+and work similar to the HTML attributes
+Props are passed to components via HTML attributes.
+props stands for properties.
+React Props are like function arguments in JavaScript and attributes in HTML.
+
+React State:
+The state is an updatable structure that is used to contain data or information about the component. 
+The state in a component can change over time. The change in state over time can happen as a response to user
+ action or system event. A component with the state is known as stateful components. 
+ It is the heart of the react component which determines the behavior of the component and how it will render. 
+ They are also responsible for making a component dynamic and interactive
+It can be update by using the setState() method.
+
+
+LifeCycle phases and Methods>
+Each component in react has a lifcycle which we can monitor and manipulate during its all phases.
+basically it has three lifcycle phases:
+1)Mounting
+2)Updating
+3)Unmounting
+
+Mounting: In mounting phase we create the instance of component or putting
+elements into the DOM.
+
+Updating: This is the next phase of lifecycle in which the component being updated. 
+A component is updateed whenever there is any change in the components state/props.
+
+Unmounting: this is the next phase in the lifecycle in this lifecycle when a componentis removed or instance of component is destroyed
+
+all the phase have their lifecycle Methods ans gets called
+1)Mounting
+ 1)Constructor():this method is called before anything else when the component is initiated
+ 2)getDerivedStateFromProps(): this method is called right before renderong the element in the dom
+ 3)render(): it is the only require method and will always be called and others all are optional 
+ 4)ComponentDidMount(): This method is called after the component is rendered
+
+2)Updating phase
+  1)getDerivestateFromProps(): This is the first method that is called when a component gets updates.
+  2)shouldComponentUpdate(): in this method we can return a boolean value that specifies whether react should continue with the rendering or not 
+    the default value of this method is true.
+  3)Render(): this method is called when a component gets updated, it has to re-render the HTML to the DOM, with the new changes.
+  4)getSnapshotBeforeUpdate(): this method we have access to the props and state before the any update, meaning that even after the update, we can check what the values were before the update.
+              means this method can give previous props and state.
+  5)componentDidUpdate(): The componentDidUpdate method is called after the component is updated in the DOM.
+
+3)Unmounting Phase
+  it has only one method that gets called when component gets Unmounting
+  componentWillUnmount(): This method is called when the component is about to be removed from the DOM.
+
+Why We are moving from class components to functional components in React because ?
+
+Class components have a proper structure like constructor and this keyword which is tricky to use , in case of fucntional component we dont have to follow any such structure.
+Since JS is a functional programming language , so classes are not that much preferred
+Functional component is faster in execution compared to class
+
+***************************************************React Hooks******************************************************************
+What is useState hook?
+it return a state variable and afunction which we can use for update the state variable value bcz we do not have any setState inside function component and
+also it takes initial value of any state variable
+
+update the state variable by creating a separate function or by writing in the same line
+
+prevState concept:
+this prevState is required when we want to use the initial value or the last value of the 
+state when we are updating the state
+
+
+Explaain useEffect hook?
+useeffect is an alternative of lifcycle method
+ componentDidMount, componentDidUpdate, componentWillUnmount is the most important lifecycle meethod
+useEffect hook accepts first parameter ass a callback function and second parameter is dependency array
+if we do not want that useEffect should run like a componentDidUpdate then pass an empty dependency array
+it is used when we want to make server call
+
+cleanUp function:: 
+ this is the function gets executed when the onent is unmounted from the screen this is mostly used for memory leakescomp
+useEffect(()=>{
+    console.log("inside useeffect")
+  return ()=>{
+   console.log("useEffect behaving like componentWillUnmount")
+    }
+},[updatable vriabl])  / componentDidMount,componentDidUpdate,componentWillUnmount/
+
+Explain useContext hook? 
+ this hook is used to use context api
+ prop drilling: if we have 4 component and we want to pass data from compo 1 to 4 then we can not directly pass data from 1 to 4
+ it passes like 1 to 2 and then 2 to 3 and then 4 compo. bt the data will be use by 1st and 4th compo so over here
+ 2 and 3rd compo recieving props data which even they are not used,this is known as propdrilling
+ then solution of prop drilling is: context api
+
+ context API: let we store the data at single place and then in watsover component we want to recieve data we need to make sure that
+component wrapped with context API 
+ howto use context api data in the component we need useContex hook
+
+ why useReducer is used?
+useState v/s useReducer
+useState hook is easy to use when we are having primitive data type like num,string etc. it is still fine to 
+ useState at some point for the non-primitive data types like objects when these objects having 3-4 key value pairs
+ but generally we will be having big complex objects containing lots of key value pairs so to update the state, prevstate
+ concept becoms complex
+ and then to make it easy we use useReducer hook
+ useReducer: it takes two arguments, InitialState and reducer function
+ this reducer function will be responsible to update the state variable.
+  this reducer function takes two parameters state and action
+
+
+
+Explain UseMemo?
+The React useMemo Hook returns a memoized value.
+The useMemo Hook only runs when one of its dependencies update.
+This can improve performance.
+One reason to use useCallback is to prevent a component from re-rendering unless its props have changed.
+**if we are passing function from parent to child and make any update inside parent component then parent component will update along with parent the 
+child component also rerender even we wrpped inside memo function but after wrapping inside memo the child component shouldnot render,but this is occur
+due to we are referncing function from parent to child , this is known as referencial equality.**
+so if want to stop it then we use useCallback hook that will stop rendering,useCallback takes a callback function and dependency array
+
+The useMemo and useCallback Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function
+
+Higher Order Component ?
+ A component which can send the data to wrapped component without even being rendered on screen.
+
+We do not render HOC on the screen, we just receive the data from it.
+
+export default App; //Normal Component
+
+export default UserHOC(App) //Component wrapped with HOC
+
+App is wrapped component, UserHOC is wrapping component. HOC component will pass the data to App component.
+
+It is a functional component or a function which takes a component as a parameter and return the new component with the data you want to share.
+
+Pure Component ??
+A component will be rendered only in the case when the state or props variables value will be changed or updated.
+ Ex: if initially state varible name = "John", now this value gets updated to name = "Doe", then rendering the component again is good and we should.
+ But if the state variable gets updated with the same value name = "John", then in this case we should not rerender our component.
+
+Class component : React Provides React.PureComponent to create a pure component which inside runs shouldComponentUpdate lifecycle method to 
+check if the prev state or props value has been updated with new value or not. If the value is new then only the component will be rendered on screen.
+
+Function Component : Earlier we were not able to create the pure component in Functional cmponent. a third party librbary came named as Recompose ,
+ pure, Wrap your functional component with pure then your component will become a pure component. But later React released memo module in its library.
+
+React-Routing??
+Routing is a way of moving from one component to another component, it makes sure that your application is a single page application. 
+In this case if you are broswer router then your page will never be reloaded and still you will be able to move from one component to another.
+REACT-ROUTER is the master library to acheive routing in react. This contains two small libraries :
+react-router-dom : this is for web application react-router-native : this is for mobile application
+
+VERY IMPORTANT
+
+When you are starting with routing in your application, you have to make sure that your complete application is wrapped with the Browswer Router.
+When you are defining routes or all the paths then you have to make sure that all of them are wrapped with Routes
+Then to define any route we will be using Route
+
+Props v/s State
+Both props and state are plain JavaScript objects. While both of them hold information that influences the output of render, 
+they are different in their functionality with respect to component. Props get passed to the component similar to function parameters whereas 
+state is managed within the component similar to variables declared within a function.
+
+
+What is redux??
+Redux is a state management tool . Whenever your application is growing in such a way that one single is having three or more child components in a chain format.
+Parent.js <- Child1.js <- Child2.js <- Child3.js
+Just imagine you have any data(present in parent) which is used only in Parent.js and Child3.js . 
+But based on above structure we will have to pass the data in Child1 and Child2 as well where this data is not even required.
+What are the core principles of Redux?
+Redux follows three fundamental principles:
+
+Single source of truth: The state of your whole application is stored in an object tree within a single store. 
+The single state tree makes it easier to keep track of changes over time and debug or inspect the application.
+
+State is read-only: The only way to change the state is to emit an action, an object describing what happened.
+This ensures that neither the views nor the network callbacks will ever write directly to the state.
+
+Changes are made with pure functions: To specify how the state tree is transformed by actions, you write reducers. 
+Reducers are just pure functions that take the previous state and an action as parameters, and return the next state.
+
+Reducers always return the accumulation of the state (based on all previous and current actions). Therefore, 
+they act as a reducer of state. Each time a Redux reducer is called, the state and action are passed as parameters. 
+This state is then reduced (or accumulated) based on the action, and then the next state is returned. 
+You could reduce a collection of actions and an initial state (of the store) on which to perform these actions to get the resulting final state.
+
+Redux Thunk v/s Redux saga
+Both Redux Thunk and Redux Saga take care of dealing with side effects. In most of the scenarios, Thunk uses Promises to deal with them, whereas
+ Saga uses Generators. Thunk is simple to use and Promises are familiar to many developers, Sagas/Generators are more powerful but you will need to learn them. 
+But both middleware can coexist, so you can start with Thunks and introduce Sagas when/if you need them
+
+Context V/s Redux??
+You can use Context in your application directly and is going to be great for passing down data to deeply nested components which what it was designed for.
+
+Whereas Redux is much more powerful and provides a large number of features that the Context API doesn't provide. Also, React Redux uses context internally but it doesn't expose this fact in the public API.
+
+
+************************************************************js interview questions************************************************************
+
+diff b/w ==, === ::
+these are the comparision operators and always return a boolean values like true/false.
+== it compares only value of any variables
+=== it compares valueas well as data type of variables
+if we wantto find out data type of any variable then we use typeof operator
+
+spread operator::
+spread operator looks like thee dots ...
+it is used to destructure the iterable elements like objects and arrys
+it actually unpack/spread the values
+so for ex ifwe want to create an obj whose value should be same as another obj thenwe use 
+spread operator
+let obj1={id:1,name:"rakesh"}
+let obj2={...obj1, add:"ratlam"}
+
+
+diff b/w var,let&const::
+these are 3 diff ways of creating or declaring the variables in js
+out of these 3 var used to be a part of es5/ECMAScript2014 & let and const are the part 
+of latest release of js version ie ES6.
+diff are:
+var is global scope variable 
+let and const are block scope
+at the time of memory allocation they will get their memry also at different location
+means var will be in global and let&const will be in script scope accoring to browser
+if we will try to access var keyword variable before initialization we wil get undefined
+but if we will try to aceess variable created using let/const it will through a refrence err
+
+
+What is execution  context?
+Ec is a concept in js engine. when we run any js code then how that code will be executed depends on ec.
+this ec will be pushed to call stack.
+it is of 2 types: global and functional.
+the moment we run the file GEC will be created.inside this we are having two phases 1st is memory allocation
+and another one is code execution phase.
+Inside memory allocation, variable and function will get allocated with memory.
+aLLthe variables get assigned with undefined value and functions get actual value.
+Once the memory allocation is done then the code execution phase will start
+in Ec all the variables gets their actual value and function will executed.when any function gets hited
+a new function FEC will be created and it will be pushed to call stack which will again 
+have memmory allocation and code execution takes place
+Once the function execution is completed then this FEC will removed from call stack
+then it will come back to GEC.
+
+
+What is closure?
+Closure is a boundary b/w function and its surrounding environment or its  combination of of a function
+budled together with its lexical environment is known as closure.
+closure provides us to access the outer variable inside the innerfunction  or closure provides flexibility and compatibility to access outer variaable
+inside inner function
+ex
+let a=100,
+function innerfun(){
+console.log(a);}
+innerFun()
+//op is 100
+
+what is Call,Apply,Bind
+
+Actually  these are three ways of invoking a function by taking object as first arguments and allows us to pass any other argument.
+in case of call method all the other orguments pass one by one
+but in case of apply all other arguments pass as an array
+and in case of bind method we get a new function which we invoke where we want
+examples
+let obj = {
+            name: "rakessh",
+            age: 27
+        }
+        function funCall(add,cls){
+            console.log(`my name is ${this.name} and age is ${this.age} and class is ${cls} and belongs to ${add}` )
+        }
+        funCall.call(obj, "ratlam", "obc")
+        funCall.apply(obj, ["ratlam","obc"])
+       let newFun=funCall.bind(obj, ["ratlam","obc"])
+
+What is prototype?
+Prototype are the mechanisms by which js object inherits features like mehod/properties from other object
+prototype is a property which comes with any variables
+All the object inherits properties and methods from prototype
+So when we create an object then js engine automatically puts its property and method into an hidden object
+and it attaches to original object
+
+let obj1={name:"rakesh",age:27}
+if we want to use object1 property inside obj2
+let obj2={address:"indore",__proto__:obj1}
+this is known as prototype chaining
+
+
+what is DOM?
+Whenever any html css js file gets loaded into browser then browser creates document object model of the page
+so dom creates a tree like structure which is made up of object
+so dom provides all neccessary power to js to make html dynamic like
+JavaScript can change all the HTML elements in the page
+JavaScript can change all the CSS styles in the page
+JavaScript can remove existing HTML elements/append new elements
+
+
+what is Undefined, Not defined and NaN
+Undefined: When we declare a variable without assigning any value and try to access it then it will give output as undefined
+for example 
+var name;
+console.log(name); //output is undefined
+name="rakesh"; 
+
+Not defined:in this case we didnot declare variable and try to access them then browser give an error
+like variable is not defined
+example
+console.log(age) //output uncaught reference error:age is not defined
+
+NaN: it stand for not-a-number;
+this property indicates that a value is not a legal number
+exampl
+console.log(parseInt("hello")); // output NaN
+there is function to check wheather the number is legal or not and it always give a boolean value like true/false
+isNaN(2) // op false
+isNaN("hello") // op true
+
+
+What is Function Constructor?
+generally we create an object using object literal which create a single object. if we want to create multiple object hten 
+function constructor comes into picture so the function constructor create multiple objects
+and it will create every time a new object
+generally function treated as function but function constructor treated as object
+function constructor actually minimize use case scenario and makes code modelarity.
+example
+function Person(name,age){
+    this.name1=name,
+        this.age1=age}
+
+let obj1=new Person("rakesh", 33);
+let obj2=new Person("ashok", 13);
+console.log(Person.obj1);
+console.log(obj2);
+
+What is hoisting
+Hoisting is a js mechanism where all the variable and function declaration moved to the top of their scope before code execution
+and js allocates memory to variables and give value undefined in case of var but incase of let/const it allocates memory at diffferent places
+like their local scope and we try to access it then it will through a reference error
+ and function defined inside program no matter where function and variables declared
+example
+console.log(a)
+var a="a hasbeen hoisted"
+the above code looks like
+var a;
+console,log(a) // op as undefined
+a="a hasbeen hoisted"
+
+What is async/await keyword in js?
+The async and await keywords enable asynchronous,
+ promise-based behavior to be written in a cleaner style
+"async and await make promises easier to write"
+async makes a function return a Promise
+await makes a function wait for a Promise
+The keyword async before a function makes the function return a promise.
+The await keyword can only be used inside an async function and it waits for the
+promise which is return by async function
+its Syntax
+async function myDisplay() {
+  let myPromise = new Promise(function(resolve, reject) {
+    resolve("hello world !!");
+  });
+  let res = await myPromise;
+    console.log(res)
+}
+myDisplay();
+
+
+find the largest value inside an array?
+let arrr=[6,7,3,4,1,2];
+let b=0;
+for(let i=0; i<arrr.length; i++){
+    if(b<arrr[i]){
+        b=arrr[i];
+    }}
+console.log(b); //op = 7
+//in this way we can do
+var ac=[1,2,3,44,5];
+console.log(Math.max(...ac)); //op=44
+//
+smallest
+var array1 =[12,2,3,1,9,8];
+var minvalue1 = array1[2]; //this index can be any upto array1.length
+for (var i = 0; i < array1.length; i++) {
+    if(array1[i]<minvalue1)
+    {
+        minvalue1 = array1[i];
+    }
+
+}
+  console.log(minvalue1); // op = 1
+
+
+diff b/w filter and map method?
+map creates a new array by transforming every element in an array individually.
+ filter creates a new array by removing elements that don't belong.
+  reduce, on the other hand, takes all of the elements in an array and reduces 
+  them into a single value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+************************************************************Node JS interview questions************************************************************
+************************************************************Node JS interview questions************************************************************
+What is NPM?
+NPM stands for Node Package Manager, responsible for managing all the packages and modules for Node.js.
+Node Package Manager provides two main functionalities:
+
+Provides online repositories for node.js packages/modules, which are searchable on search.nodejs.org
+Provides command-line utility to install Node.js packages and also manages Node.js versions and dependencies
+
+
+
+What are the modules in Node.js?
+Modules are like JavaScript libraries that can be used in a Node.js application to include a set of functions. 
+To include a module in a Node.js application, use the require() function with the parentheses containing the module's name.
+In Node.js, Modules are the blocks of encapsulated code that communicates with an external application on the basis of their related functionality.
+ Modules can be a single file or a collection of multiples files/folders. The reason programmers are heavily reliant on modules is because of their 
+re-usability as well as the ability to break down a complex piece of code into manageable chunks
+Node.js has many modules to provide the basic functionality needed for a web application. Some of them like:
+Core Modules
+local Modules
+Third-party Modules
+
+Core Modules: Node.js has many built-in modules that are part of the platform and comes with Node.js installation.
+These modules can be loaded into the program by using the require function.
+var module = require('module_name');
+ex are
+http module:	creates an HTTP server in Node.js.
+path module:	includes methods to deal with file paths.
+
+
+Local Modules: Unlike built-in and external modules, local modules are created locally in our Node.js application. 
+Let’s create a simple calculating module that calculates various operations. Create a calc.js file that has the following code:
+exports.add = function (x, y) { 
+    return x + y; 
+}; 
+
+it is used in index.js file
+var calculator = require('./calc');
+var x = 50, y = 10; 
+    
+console.log("Addition of 50 and 10 is "
+                   + calculator.add(x, y)); 
+
+Third-party modules: Third-party modules are modules that are available online using the Node Package Manager(NPM). 
+These modules can be installed in the project folder or globally. Some of the popular third-party modules are mongoose, express, angular, and react.
+ex are
+npm install express
+npm install mongoose
+
+
+
+what is module.exports?
+The module.exports is actually a property of the module object in node.js. module. Exports is the object that is returned to the require() call.
+By module.exports, we can export functions, objects, and their references from one file and can use them in other files by importing them by require() method.
+Purpose:
+The main purpose of module.exports is to achieve modular programming. Modular programming refers to separating the functionality of a program into independent,
+ interchangeable modules, such that each contains everything necessary to execute only one aspect of the desired functionality.
+ By not using module.exports it becomes difficult to write a large program without modular/reusable code.
+
+Using module.exports we can separate business logic from other modules.
+
+By Using it becomes easy to maintain and manage the code base in different modules.
+
+
+
+diff types of http request?
+GET: GET method is used to establish connections and receive info from the server. It is used while making API calls, where no modification of data is involved.
+
+POST: The POST method is generally used to send data inside the entity-body section. Authentication, File Uploads, etc. are all done via POST method requests.
+
+DELETE: This method is used to delete resources on the server.
+
+PUT: This method is used to replace existing resources on the server with the updated resources.
+HEAD: Functions similarly to GET, but sends the message request without the entity-body. 
+This is used in cases when the server must not return the message-body in the response. Or in cases when the files being accessed are too large to be transmitted.
+url:  https://www.geeksforgeeks.org/difference-between-http-get-and-post-methods/
+
+
+CORS?
+Cross-Origin Resource Sharing (CORS) is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) 
+other than its own from which a browser should permit loading resources. CORS also relies on a mechanism by which browsers make a "preflight" request to 
+the server hosting the cross-origin resource, in order to check that the server will permit the actual request. In that preflight, the browser sends headers that
+ indicate the HTTP method and headers that will be used in the actual request.
+The CORS mechanism supports secure cross-origin requests and data transfers between browsers and servers.
+An example of a cross-origin request: the front-end JavaScript code served from https://domain-a.com uses XMLHttpRequest to make a request for https://domain-b.com/data.json.
+
+For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts. For example, XMLHttpRequest and the Fetch API follow the same-origin policy. 
+This means that a web application using those APIs can only request resources from the same origin the application was loaded from unless the response from other origins includes the right CORS headers.
+
+what is nodejs?
+
+Node.js is an open-source and cross-platform runtime environment built on Chrome’s V8 JavaScript engine for executing JavaScript code outside of a browser
+Node.js is an open-source backend javascript runtime environment. It is a used as backend service where javascript works on the server-side of the application.
+ This way javascript is used on both frontend and backend.
+
+What Is Express JS?     
+Express is a node js web application framework that provides broad features for building web and mobile applications.
+It is used to build a single page, multipage, and hybrid web application.
+It's a layer built on the top of the Node js that helps manage servers and routes.
