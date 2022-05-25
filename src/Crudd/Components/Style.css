@@ -1,0 +1,140 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.dashboardContainer{
+    width: 90%;
+    margin: 60px auto auto;
+    height: 80vh;
+    box-shadow: 2px 2px 20px silver;
+    border-radius: 10px;
+}
+
+.dashboardContainer .headerContainer{
+    border-bottom: 1px solid silver;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboardContainer .headerContainer p{
+    margin: 10px 0px 5px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    
+}
+
+.dashboardContainer .headerContainer button{
+    border: none;
+    font-size: 16px;
+    height: 40px;
+    padding: 8px 20px 8px 20px;
+    margin: 5px 20px;
+    background-color: #036dce;
+    color: white;
+    border-radius: 5px;
+    
+}
+
+.dashboardContainer .headerContainer button:hover{
+    background-color: #055fb4;
+    cursor: pointer;
+}
+
+
+/* CSS FOR MODALS */
+.modalContainer{
+    margin-top: 150px;
+    margin-left: -150px;
+}
+
+.modalHeader{
+    background-color: #036dce;
+    color: white;
+    font-weight: 200px;
+    width: 800px;
+    box-shadow: 5px 5px 20px rgb(79, 71, 71);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.modalBody{
+    width: 800px;
+    background-color: white;
+    box-shadow: 5px 5px 20px rgb(79, 71, 71);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+
+
+/* CSS for employee container */
+.employeeDataContainer{
+    margin-top: 10px;
+}
+
+.editBtn{
+    border: none;
+    color: white;
+    background-color: #036dce;
+    padding: 5px 10px 5px 10px;
+    border-radius: 2px;
+}
+
+.editBtn:hover{
+    background-color: #055fb4;
+    cursor: pointer;
+}
+
+.removeBtn{
+    color: red;
+    background-color: white;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+/* CSS FOR ADD EMPLOYEE COMPONENT */
+.formElements{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.formElements .inputContainer{
+    margin-top: 20px;
+}
+
+.formElements input{
+    margin-top: 10px;
+    width: 300px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    border: 2px solid silver;
+    color: grey;   
+}
+
+.formBtn{
+    display: flex;
+    justify-content: left;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.formBtn .Cancel-Btn{
+    border: 1px solid silver;
+    background-color: white;
+    padding: 5px 12px 5px 12px;
+    border-radius: 3px;
+}
+
+.formBtn .Add-Btn{
+    border: none;
+    background-color: #036dce;
+    padding: 5px 15px 5px 15px;
+    border-radius: 3px;
+    color: white;
+    margin-left: 20px;
+}

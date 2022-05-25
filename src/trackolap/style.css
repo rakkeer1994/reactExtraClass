@@ -1,0 +1,79 @@
+.cont-student{
+    display: flex;
+    border-bottom: 1px solid lightblue;
+    border-top: 1px solid lightblue;
+    height: 8vh;
+}
+
+
+
+
+.cont-student .btn{
+    position: absolute;
+   right: 10%;
+   margin-top: 1%;
+}
+
+.edit-btn{
+    margin-right: 2%;
+}
+.edit-btn:hover{
+    background-color: blue;
+    color: white;
+}
+.cont-student .btn button{
+    width: 8vw;
+    height: 4vh;
+}
+
+.cont-student .btn button:hover{
+    background-color: blue;
+    color: white;
+}
+
+.form-cont{
+    border: 1px  red;
+    box-shadow: 2px 2px lightblue;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
+
+.detail1, .detail2, .detail3, .detail4{
+    margin: 2%;
+    width: 25vw;
+}
+
+.plotData{
+    margin-left: 20%;
+    display: flex;
+}
+.plotData div{
+    margin-top: 1%;
+    margin-left: 2%;
+    width: 11vw;
+    height: 7vh;
+}
+
+.btn1{
+margin: 1%;
+
+}
+
+.btn1:hover{
+    background-color: blue;
+    color: white;
+     }
+
+     .formHeading{
+         display: flex;
+
+     }
+
+     .btnCross{
+         position: absolute;
+         right: 0;
+         top: 2%;
+         font-size: 1.6rem;
+     }
+

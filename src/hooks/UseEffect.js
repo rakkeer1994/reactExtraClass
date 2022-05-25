@@ -4,18 +4,18 @@ const UseEffectTest = () => {
 const [a, setA]=useState("abc")
 const [b, setB]=useState("pqr")
 useEffect(()=>{
-    console.log("hello use effect hook")
+    console.log("in this way useEffect working as componentDidMount and componentDidUpdate")
 })
 // in this way useEffect working as componentDidMount and componentDidUpdate
 
 useEffect(()=>{
-    console.log("hello use effect hook")
+    console.log("in this way working like componentDidMount only")
 }, [])
 // in this way working like componentDidMount only
 
-useEffect(()=>{
-    console.log("hello use effect hook")
-}, [a])
+// useEffect(()=>{
+//     console.log("hello use effect hook")
+// }, [a])
 
 // in this way componentDidMount,componentDidUpdate work only when state a is change
 
@@ -26,6 +26,12 @@ useEffect(()=>{
    }
 })
 //componentWillUnmount: cleanup function in useEffect
+
+// useEffect(()=>{
+//   return function cleanUp(){
+//     console.log("useSeeffect work when update")
+//   }
+// },[b])
   return (
     <div>
         <h1>this is UseEffect class </h1>
